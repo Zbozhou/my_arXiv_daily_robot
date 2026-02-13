@@ -1,5 +1,5 @@
 # basic info
-user_name: "Bai Shuanghao"
+user_name: "Bozhou Zhang"
 repo_name: "cv-arxiv-daily"
 
 show_badge: false
@@ -26,16 +26,9 @@ keywords:
     filters: ["Robot Manipulation", "Robotic Manipulation", "Grasp"]
   "Vision Language Action Model":
     filters: ["Vision-Language-Action Model", "Vision Language Action Model", "VLA", "VLAs", "VLA Models"]
-  "Imitation Learning":
-    filters: ["Imitation Learning", "Behavior Cloning", "Behavioral Cloning"]
-  # "Robotic Navigation":
-  #   filters: ["Robot Navigation", "Vision-and-Language Navigation", "Vision Language Navigation", "Vision-Language-Navigation"]
-#   "DA & DG":
-#     filters: ["Domain Adaptation", "Unsupervised Domain Adaptation", "Source-free Domain Adaptation", "Test-time Domain Adaptation",
-#       "Domain Generalization", "Source-free Domain Generalization", "Test-time Domain Generalization"]
-#   "VLM":
-#     filters: ["Vision Language Model", "Vision Language Models", "Vision-Language Model", "Vision-Language Models"]
-#   "Prompt":
-#     filters: ["Prompt Tuning", "Prompt Learning", "Prompt", "Prompts"]
-#   "Causal Learning":
-#     filters: ["Causal Inference", "Causal Model", "Causal Discovery", "Causal Reasoning"]
+  "World Model":
+    filters: ["World Model", "Video Model", "Video Action", "World Action"]
+  "VLM":
+    filters: ["Vision Language Model", "Vision Language Models", "Vision-Language Model", "Vision-Language Models", "VA", "WA", "WM"]
+  "Reinforcement Learning":
+    filters: ["Reinforcement Learning", "Deep Reinforcement Learning", "RL Agent", "RL"]
