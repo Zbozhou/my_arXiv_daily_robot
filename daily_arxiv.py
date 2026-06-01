@@ -198,24 +198,71 @@ def get_repo_from_hf(arxiv_id_no_ver: str) -> str | None:
 def _iter_arxiv_results(query: str, n: int):
     """
     封装 arXiv 查询，兼容 arxiv 包的新旧结果迭代 API。
-    遇到 UnexpectedEmptyPageError 降级到 ≤25 条再拉。
+    遇到 UnexpectedEmptyPageError 降级到 ≤25 条再拉；遇到 HTTP 429 时退避重试。
     """
-    def iter_results(search):
+    def parse_backoff_seconds() -> list[int]:
+        raw = os.getenv("ARXIV_429_BACKOFF_SECONDS", "30,90,180")
+        try:
+            return [int(x.strip()) for x in raw.split(",") if x.strip()]
+        except ValueError:
+            return [30, 90, 180]
+
+    def iter_results(search, page_size):
         if hasattr(search, "results"):
             return search.results()
-        return arxiv.Client().results(search)
+        client_kwargs = {
+            "page_size": max(1, min(page_size, n)),
+            "delay_seconds": float(os.getenv("ARXIV_DELAY_SECONDS", "8")),
+            "num_retries": int(os.getenv("ARXIV_NUM_RETRIES", "5")),
+        }
+        try:
+            client = arxiv.Client(**client_kwargs)
+        except TypeError:
+            client = arxiv.Client()
+        return client.results(search)
 
-    empty_page_error = getattr(arxiv, "UnexpectedEmptyPageError", RuntimeError)
+    def is_429_error(err) -> bool:
+        status = getattr(err, "status", None) or getattr(err, "status_code", None)
+        return status == 429 or "HTTP 429" in str(err)
 
-    try:
-        se = arxiv.Search(query=query, max_results=n, sort_by=arxiv.SortCriterion.SubmittedDate)
-        for r in iter_results(se):
-            yield r
-    except empty_page_error:
-        logging.warning("Empty page from arXiv; retrying with fewer results (<=25)")
-        se2 = arxiv.Search(query=query, max_results=min(n, 25), sort_by=arxiv.SortCriterion.SubmittedDate)
-        for r in iter_results(se2):
-            yield r
+    empty_page_error = getattr(arxiv, "UnexpectedEmptyPageError", None)
+    http_error = getattr(arxiv, "HTTPError", None)
+
+    def is_empty_page_error(err) -> bool:
+        return empty_page_error is not None and isinstance(err, empty_page_error)
+
+    def is_http_error(err) -> bool:
+        return http_error is not None and isinstance(err, http_error)
+
+    for max_results in [n, min(n, 25)]:
+        backoff_seconds = [0] + parse_backoff_seconds()
+        for attempt, delay in enumerate(backoff_seconds):
+            if delay:
+                logging.warning(f"arXiv HTTP 429; sleeping {delay}s before retry")
+                time.sleep(delay)
+
+            try:
+                se = arxiv.Search(
+                    query=query,
+                    max_results=max_results,
+                    sort_by=arxiv.SortCriterion.SubmittedDate,
+                )
+                for r in iter_results(se, max_results):
+                    yield r
+                return
+            except Exception as err:
+                if not is_empty_page_error(err):
+                    if is_http_error(err) and is_429_error(err):
+                        if attempt == len(backoff_seconds) - 1:
+                            logging.error("arXiv HTTP 429 persisted; skipping this query for now")
+                            return
+                        continue
+                    raise
+
+                if max_results <= 25:
+                    raise
+                logging.warning("Empty page from arXiv; retrying with fewer results (<=25)")
+                break
 
 def get_daily_papers(topic,query="slam", max_results=2):
     """
