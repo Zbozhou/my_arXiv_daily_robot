@@ -2544,7 +2544,7 @@ _No papers yet._
 |**2026-05-03**|**TRAP: Tail-aware Ranking Attack for World-Model Planning**|Siyuan Duan et.al.|[2605.01950](https://arxiv.org/abs/2605.01950)|**[link](https://github.com/leofan90/Awesome-World-Models)**|
 |**2026-05-03**|**Divide and Conquer: Decoupled Representation Alignment for Multimodal World Models**|Junyuan Xiao et.al.|[2605.01896](https://arxiv.org/abs/2605.01896)|**[link](https://github.com/leofan90/Awesome-World-Models)**|
 |**2026-05-03**|**Embody4D: A Generalist 4D World Model for Embodied AI**|Peiyan Tu et.al.|[2605.01799](https://arxiv.org/abs/2605.01799)|**[link](https://github.com/leofan90/Awesome-World-Models)**|
-|**2026-05-03**|**TrajShield: Trajectory-Level Safety Mediation for Defending Text-to-Video Models Against Jailbreak Attacks**|Quanchen Zou et.al.|[2605.01761](https://arxiv.org/abs/2605.01761)|null|
+|**2026-05-03**|**TrajShield: Trajectory-Level Safety Mediation for Defending Text-to-Video Models Against Jailbreak Attacks**|Quanchen Zou et.al.|[2605.01761](https://arxiv.org/abs/2605.01761)|**[link](https://github.com/iszhanjiawei/video-to-audio-arxiv-daily)**|
 |**2026-05-03**|**Latent State Design for World Models under Sufficiency Constraints**|Keon Woo Kim et.al.|[2605.01694](https://arxiv.org/abs/2605.01694)|**[link](https://github.com/leofan90/Awesome-World-Models)**|
 |**2026-05-01**|**ARIS: Agentic and Relationship Intelligence System for Social Robots**|Stavya Datta et.al.|[2605.00943](https://arxiv.org/abs/2605.00943)|**[link](https://github.com/suruoxi/WorldModel-VLA-arxiv-daily)**|
 |**2026-05-01**|**Code World Model Preparedness Report**|Daniel Song et.al.|[2605.00932](https://arxiv.org/abs/2605.00932)|**[link](https://github.com/luohongk/Embodied-AI-Daily)**|
