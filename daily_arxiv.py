@@ -197,16 +197,24 @@ def get_repo_from_hf(arxiv_id_no_ver: str) -> str | None:
 
 def _iter_arxiv_results(query: str, n: int):
     """
-    封装 arxiv.Search().results()，遇到 UnexpectedEmptyPageError 降级到 ≤25 条再拉。
+    封装 arXiv 查询，兼容 arxiv 包的新旧结果迭代 API。
+    遇到 UnexpectedEmptyPageError 降级到 ≤25 条再拉。
     """
+    def iter_results(search):
+        if hasattr(search, "results"):
+            return search.results()
+        return arxiv.Client().results(search)
+
+    empty_page_error = getattr(arxiv, "UnexpectedEmptyPageError", RuntimeError)
+
     try:
         se = arxiv.Search(query=query, max_results=n, sort_by=arxiv.SortCriterion.SubmittedDate)
-        for r in se.results():
+        for r in iter_results(se):
             yield r
-    except arxiv.UnexpectedEmptyPageError:
+    except empty_page_error:
         logging.warning("Empty page from arXiv; retrying with fewer results (<=25)")
         se2 = arxiv.Search(query=query, max_results=min(n, 25), sort_by=arxiv.SortCriterion.SubmittedDate)
-        for r in se2.results():
+        for r in iter_results(se2):
             yield r
 
 def get_daily_papers(topic,query="slam", max_results=2):
