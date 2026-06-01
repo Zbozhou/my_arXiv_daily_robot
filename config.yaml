@@ -19,10 +19,41 @@ md_gitpage_path: './docs/index.md'
 md_wechat_path: './docs/wechat.md'
 
 # keywords
+robot_context_filters: &robot_context_filters
+  - Robot
+  - Robots
+  - Robotic
+  - Robotics
+  - Embodied AI
+  - Embodied Agent
+  - Embodied Agents
+
+topic_groups:
+  "Robot":
+    - "Humanoid"
+    - "Dexterous Manipulation"
+    - "Reinforcement Learning"
+    - "VLA/VA/WA"
+  "Old":
+    - "Robot & Agent"
+    - "Robotic Manipulation"
+    - "Vision Language Action Model"
+    - "Imitation Learning"
+    - "World Model"
+    - "VLM"
+    - "Reinforcement Learning (Old)"
+    - "World Model & World Action"
+
 keywords:
-  "Robot & Agent":
-    filters: ["Robot Learning", "Robot Policy", "Robot Policies", "Human-Robot", "Cross-Embodiment", "Robot Manipulation", "Robotic Manipulation"]
-  "Vision Language Action Model":
-    filters: ["Vision-Language-Action Model", "Vision Language Action Model", "VLA", "VLAs", "VLA Models"]
-  "World Model & World Action":
-    filters: ["World Model", "Video Model", "Video Action", "World Action", "VA", "WA", "WM"]
+  "Humanoid":
+    require: *robot_context_filters
+    filters: ["Humanoid", "Humanoid Robot", "Humanoid Robots", "Humanoid Robotics", "Bipedal Robot", "Bipedal Robots", "Whole-Body Control"]
+  "Dexterous Manipulation":
+    require: *robot_context_filters
+    filters: ["Dexterous Manipulation", "Dexterous Grasping", "Dexterous Hand", "Dexterous Hands", "In-Hand Manipulation", "Multi-Fingered Manipulation", "Robotic Dexterity"]
+  "Reinforcement Learning":
+    require: *robot_context_filters
+    filters: ["Reinforcement Learning", "RL", "Offline RL", "Online RL", "Model-Based Reinforcement Learning", "On-Robot Reinforcement Learning", "Policy Optimization"]
+  "VLA/VA/WA":
+    require: *robot_context_filters
+    filters: ["Vision-Language-Action", "Vision Language Action", "Vision-Language-Action Model", "Vision Language Action Model", "VLA", "VLAs", "VLA Model", "VLA Models", "Vision-Action", "Video Action", "World Action", "World Action Model", "VA", "WA"]

@@ -36,8 +36,8 @@ arxiv_url = "https://arxiv.org/"
 
 def load_config(config_file:str) -> dict:
     """
-    读取配置，并把 keywords->filters 拼成 arXiv 查询串：
-    形如：all:"Vision Language Model" OR all:"Vision-Language Model"
+    读取配置，并把 keywords 下的 filters/require 拼成 arXiv 查询串：
+    filters 内部 OR，require 内部 OR，二者之间 AND。
     """
     def pretty_filters(**config) -> dict:
         keywords = {}
@@ -54,8 +54,23 @@ def load_config(config_file:str) -> dict:
                 terms.append(FIELD + quote_if_needed(flt))
             return OR.join(terms)
 
+        def group_filters(filters: list) -> str:
+            query = parse_filters(filters)
+            if not query:
+                return ''
+            return f"({query})" if OR in query else query
+
         for k,v in config['keywords'].items():
-            keywords[k] = parse_filters(v['filters'])
+            if v.get('query'):
+                keywords[k] = v['query']
+                continue
+
+            filter_query = group_filters(v.get('filters', []))
+            required_query = group_filters(v.get('require', []))
+            if required_query and filter_query:
+                keywords[k] = f"{required_query} AND {filter_query}"
+            else:
+                keywords[k] = filter_query or required_query
         return keywords
 
     with open(config_file,'r') as f:
@@ -342,7 +357,8 @@ def json_to_md(filename,md_filename,
                use_title = True,
                use_tc = True,
                show_badge = True,
-               use_b2t = True):
+               use_b2t = True,
+               topic_groups = None):
     """
     @param filename: str
     @param md_filename: str
@@ -361,6 +377,48 @@ def json_to_md(filename,md_filename,
         ret += f'{space_trail}${match.group()[1:-1].strip()}${space_leading}'
         ret += s[math_end:]
         return ret
+
+    def slugify(*parts) -> str:
+        text = '-'.join(str(part) for part in parts if part)
+        text = text.lower().replace('&', 'and')
+        text = re.sub(r'[^a-z0-9]+', '-', text)
+        text = re.sub(r'-+', '-', text).strip('-')
+        return text or 'section'
+
+    def get_groups():
+        if not topic_groups:
+            return None
+        if isinstance(topic_groups, dict):
+            return list(topic_groups.items())
+        return topic_groups
+
+    def write_heading(f, level: int, title: str, anchor: str):
+        f.write(f'<a id="{anchor}"></a>\n')
+        f.write(f"{'#' * level} {title}\n\n")
+
+    def write_table_header(f):
+        if use_title == True :
+            if to_web == False:
+                f.write("|Publish Date|Title|Authors|PDF|Code|\n" + "|---|---|---|---|---|\n")
+            else:
+                f.write("| Publish Date | Title | Authors | PDF | Code |\n")
+                f.write("|:---------|:-----------------------|:---------|:------|:------|\n")
+
+    def write_papers(f, day_content):
+        write_table_header(f)
+
+        # sort papers by date
+        day_content = sort_papers(day_content)
+
+        for _,v in day_content.items():
+            if v is not None:
+                f.write(pretty_math(v)) # make latex pretty
+
+        f.write(f"\n")
+
+    def write_back_to_top(f):
+        if use_b2t:
+            f.write(f"<p align=right>(<a href=#top>back to top</a>)</p>\n\n")
 
     DateNow = datetime.date.today()
     DateNow = str(DateNow)
@@ -389,55 +447,90 @@ def json_to_md(filename,md_filename,
             f.write(f"[![Stargazers][stars-shield]][stars-url]\n")
             f.write(f"[![Issues][issues-shield]][issues-url]\n\n")
 
+        if use_title == False:
+            f.write('<a id="top"></a>\n')
+
         if use_title == True:
-            f.write("## Updated on " + DateNow + "\n")
+            write_heading(f, 2, "Updated on " + DateNow, "top")
         else:
             f.write("> Updated on " + DateNow + "\n")
 
         f.write("> Usage instructions: [here](./docs/README.md#usage)\n\n")
+
+        groups = get_groups()
 
         #Add: table of contents
         if use_tc == True:
             f.write("<details>\n")
             f.write("  <summary>Table of Contents</summary>\n")
             f.write("  <ol>\n")
+            if groups:
+                for group_name, topics in groups:
+                    visible_topics = [
+                        topic for topic in topics
+                        if data.get(topic) or group_name != "Old"
+                    ]
+                    if not visible_topics:
+                        continue
+                    f.write(f"    <li><a href=#{slugify(group_name)}>{group_name}</a>\n")
+                    f.write("      <ol>\n")
+                    for topic in visible_topics:
+                        f.write(
+                            f"        <li><a href=#{slugify(group_name, topic)}>{topic}</a></li>\n"
+                        )
+                    f.write("      </ol>\n")
+                    f.write("    </li>\n")
+            else:
+                for keyword in data.keys():
+                    day_content = data[keyword]
+                    if not day_content:
+                        continue
+                    kw = keyword.replace(' ','-')
+                    f.write(f"    <li><a href=#{kw.lower()}>{keyword}</a></li>\n")
+            f.write("  </ol>\n")
+            f.write("</details>\n\n")
+
+        if groups:
+            grouped_topics = set()
+            rendered_topics = set()
+            for group_name, topics in groups:
+                visible_topics = [
+                    topic for topic in topics
+                    if data.get(topic) or group_name != "Old"
+                ]
+                if not visible_topics:
+                    continue
+
+                write_heading(f, 2, group_name, slugify(group_name))
+                for topic in visible_topics:
+                    grouped_topics.add(topic)
+                    day_content = data.get(topic, {})
+                    write_heading(f, 3, topic, slugify(group_name, topic))
+                    if not day_content:
+                        f.write("_No papers yet._\n\n")
+                        continue
+                    write_papers(f, day_content)
+                    rendered_topics.add(topic)
+                    write_back_to_top(f)
+
+            for keyword in data.keys():
+                if keyword in grouped_topics or keyword in rendered_topics:
+                    continue
+                day_content = data[keyword]
+                if not day_content:
+                    continue
+                write_heading(f, 2, keyword, slugify(keyword))
+                write_papers(f, day_content)
+                write_back_to_top(f)
+        else:
             for keyword in data.keys():
                 day_content = data[keyword]
                 if not day_content:
                     continue
-                kw = keyword.replace(' ','-')
-                f.write(f"    <li><a href=#{kw.lower()}>{keyword}</a></li>\n")
-            f.write("  </ol>\n")
-            f.write("</details>\n\n")
-
-        for keyword in data.keys():
-            day_content = data[keyword]
-            if not day_content:
-                continue
-            # the head of each part
-            f.write(f"## {keyword}\n\n")
-
-            if use_title == True :
-                if to_web == False:
-                    f.write("|Publish Date|Title|Authors|PDF|Code|\n" + "|---|---|---|---|---|\n")
-                else:
-                    f.write("| Publish Date | Title | Authors | PDF | Code |\n")
-                    f.write("|:---------|:-----------------------|:---------|:------|:------|\n")
-
-            # sort papers by date
-            day_content = sort_papers(day_content)
-
-            for _,v in day_content.items():
-                if v is not None:
-                    f.write(pretty_math(v)) # make latex pretty
-
-            f.write(f"\n")
-
-            #Add: back to top
-            if use_b2t:
-                top_info = f"#Updated on {DateNow}"
-                top_info = top_info.replace(' ','-').replace('.','')
-                f.write(f"<p align=right>(<a href={top_info.lower()}>back to top</a>)</p>\n\n")
+                # the head of each part
+                f.write(f"## {keyword}\n\n")
+                write_papers(f, day_content)
+                write_back_to_top(f)
 
         if show_badge == True:
             # we don't like long string, break it!
@@ -470,6 +563,7 @@ def demo(**config):
     publish_gitpage = config['publish_gitpage']
     publish_wechat = config['publish_wechat']
     show_badge = config['show_badge']
+    topic_groups = config.get('topic_groups')
 
     b_update = config['update_paper_links']
     logging.info(f'Update Paper Link = {b_update}')
@@ -492,7 +586,8 @@ def demo(**config):
             update_paper_links(json_file)
         else:
             update_json_file(json_file,data_collector)
-        json_to_md(json_file,md_file, task ='Update Readme', show_badge = show_badge)
+        json_to_md(json_file,md_file, task ='Update Readme',
+                   show_badge = show_badge, topic_groups = topic_groups)
 
     # 2. update docs/index.md file (to gitpage)
     if publish_gitpage:
@@ -504,7 +599,8 @@ def demo(**config):
             update_json_file(json_file,data_collector)
         json_to_md(json_file, md_file, task ='Update GitPage',
                    to_web = True, show_badge = show_badge,
-                   use_tc=False, use_b2t=False)
+                   use_tc=False, use_b2t=False,
+                   topic_groups = topic_groups)
 
     # 3. Update docs/wechat.md file
     if publish_wechat:
@@ -515,7 +611,9 @@ def demo(**config):
         else:
             update_json_file(json_file, data_collector_web)
         json_to_md(json_file, md_file, task ='Update Wechat',
-                   to_web=False, use_title= False, show_badge = show_badge)
+                   to_web=False, use_title= False,
+                   show_badge = show_badge,
+                   topic_groups = topic_groups)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
