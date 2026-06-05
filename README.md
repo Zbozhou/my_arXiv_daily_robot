@@ -1,5 +1,5 @@
 <a id="top"></a>
-## Updated on 2026.06.02
+## Updated on 2026.06.05
 
 > Usage instructions: [here](./docs/README.md#usage)
 
@@ -35,7 +35,60 @@
 <a id="robot-humanoid"></a>
 ### Humanoid
 
-_No papers yet._
+|Publish Date|Title|Authors|PDF|Code|
+|---|---|---|---|---|
+|**2026-06-04**|**HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers**|Lizhi Yang et.al.|[2606.06493](https://arxiv.org/abs/2606.06493)|**[link](https://github.com/lzyang2000/HANDOFF)**|
+|**2026-06-04**|**MotionDisco: Motion Discovery for Extreme Humanoid Loco-Manipulation**|Ilyass Taouil et.al.|[2606.06139](https://arxiv.org/abs/2606.06139)|null|
+|**2026-06-04**|**TAGA: Terrain-aware Active Gaze Learning for Generalizable Agile Humanoid Locomotion**|Peizhuo Li et.al.|[2606.05880](https://arxiv.org/abs/2606.05880)|null|
+|**2026-06-04**|**LadderMan: Learning Humanoid Perceptive Ladder Climbing**|Siheng Zhao et.al.|[2606.05873](https://arxiv.org/abs/2606.05873)|null|
+|**2026-06-04**|**Accelerating and Scaling MPC-Guided Reinforcement Learning for Humanoid Locomotion and Manipulation**|Junheng Li et.al.|[2606.05687](https://arxiv.org/abs/2606.05687)|null|
+|**2026-06-03**|**Flash-WAM: Modality-Aware Distillation for World Action Models**|Arman Akbari et.al.|[2606.05254](https://arxiv.org/abs/2606.05254)|null|
+|**2026-06-03**|**GRAIL: Generating Humanoid Loco-Manipulation from 3D Assets and Video Priors**|Tianyi Xie et.al.|[2606.05160](https://arxiv.org/abs/2606.05160)|**[link](https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Locomanipulation-GRAIL)**|
+|**2026-06-03**|**M3imic: Learning a Versatile Whole-Body Controller for Multimodal Motion Mimicking**|Zuxing Lu et.al.|[2606.04829](https://arxiv.org/abs/2606.04829)|**[link](https://github.com/BaiShuanghao/my_arXiv_daily)**|
+|**2026-06-03**|**CoRe-MoE: Contrastive Reweighted Mixture of Experts for Multi-Terrain Humanoid Locomotion with Gait Adaptation**|Kailun Huang et.al.|[2606.04718](https://arxiv.org/abs/2606.04718)|**[link](https://github.com/RainbowNebula/robot-paper-daily)**|
+|**2026-06-02**|**SimuScene: Simulation-Ready Compositional 3D Scene Reconstruction from a Single Image**|Inhee Lee et.al.|[2606.03994](https://arxiv.org/abs/2606.03994)|**[link](https://github.com/BaiShuanghao/my_arXiv_daily)**|
+|**2026-06-02**|**Humanoid-GPT: Scaling Data and Structure for Zero-Shot Motion Tracking**|Zekun Qi et.al.|[2606.03985](https://arxiv.org/abs/2606.03985)|**[link](https://github.com/Foruck/Awesome-Human-Motion)**|
+|**2026-06-02**|**Let the Dynamics Flow: Stable Flow Matching Dynamical Systems**|Rodrigo Pérez-Dattari et.al.|[2606.03834](https://arxiv.org/abs/2606.03834)|**[link](https://github.com/BaiShuanghao/my_arXiv_daily)**|
+|**2026-06-02**|**Bionic Human-Motion Style Transfer for Physically Executable Whole-Body Control of Humanoid Robots**|Tianchen Huang et.al.|[2606.03536](https://arxiv.org/abs/2606.03536)|**[link](https://github.com/Foruck/Awesome-Human-Motion)**|
+|**2026-06-02**|**Human2Humanoid: Physics-Aware Cross-Morphology Motion Retargeting for Humanoid Robots**|Tianchen Huang et.al.|[2606.03476](https://arxiv.org/abs/2606.03476)|**[link](https://github.com/Foruck/Awesome-Human-Motion)**|
+|**2026-06-02**|**SplitAdapter: Load-Aware Humanoid Loco-Manipulation via Factorized Adaptation**|Jeonguk Kang et.al.|[2606.03297](https://arxiv.org/abs/2606.03297)|**[link](https://github.com/Foruck/Awesome-Human-Motion)**|
+|**2026-06-01**|**SeeTraceAct: Visibility-Aware Latent Planning from Cross-Embodiment Demonstration Videos**|Jaehyeon Son et.al.|[2606.02745](https://arxiv.org/abs/2606.02745)|**[link](https://github.com/luohongk/Embodied-AI-Daily)**|
+|**2026-06-02**|**PHASOR: Phase-Anchored Universal Action Representations for Humanoid Embodiments**|Kihyun Kim et.al.|[2606.01851](https://arxiv.org/abs/2606.01851)|**[link](https://github.com/Foruck/Awesome-Human-Motion)**|
+|**2026-05-31**|**LEGS: Fine-Tuning Teleop-Free VLAs for Humanoid Loco-manipulation in an Embodied Gaussian Splatting World**|Hojune Kim et.al.|[2606.01458](https://arxiv.org/abs/2606.01458)|**[link](https://github.com/longxiang-ai/awesome-gaussians)**|
+|**2026-05-30**|**Global-Local Attention Decomposition for Terrain Encoding in Humanoid Perceptive Locomotion**|Shengcheng Fu et.al.|[2606.00637](https://arxiv.org/abs/2606.00637)|**[link](https://github.com/Foruck/Awesome-Human-Motion)**|
+|**2026-05-29**|**Constrained Whole-Body Tracking for Humanoid Robots**|Daniel Morton et.al.|[2606.00374](https://arxiv.org/abs/2606.00374)|null|
+|**2026-05-29**|**HOIST: Humanoid Optimization with Imitation and Sample-efficient Tuning for Manipulating Suspended Loads**|Songyang Liu et.al.|[2606.00252](https://arxiv.org/abs/2606.00252)|null|
+|**2026-05-20**|**DUET: Unified Dual-Space Emotion Control for Diffusion and Flow-Matching Driven Text-to-Speech**|Xu Zhang et.al.|[2606.00066](https://arxiv.org/abs/2606.00066)|**[link](https://github.com/NickDee96/ASR-TTS-paper-daily)**|
+|**2026-05-29**|**Learning Terrain-Aware Whole-Body Control for Perceptive Legged Loco-Manipulation**|Sikai Guo et.al.|[2605.31343](https://arxiv.org/abs/2605.31343)|null|
+|**2026-05-29**|**SSR: Scaling Surefooted and Symmetric Humanoid Traversal to the Open World**|Ruiqi Yu et.al.|[2605.30770](https://arxiv.org/abs/2605.30770)|null|
+|**2026-05-28**|**Gaze2Act: Gaze-Conditioned Vision-Language-Action Policies for Interactive Robot Manipulation**|Kuangji Zuo et.al.|[2605.30282](https://arxiv.org/abs/2605.30282)|**[link](https://github.com/luohongk/Embodied-AI-Daily)**|
+|**2026-06-03**|**SalsaAgent: A multimodal embodied language model for interactive dance generation**|Payam Jome Yazdian et.al.|[2605.29219](https://arxiv.org/abs/2605.29219)|**[link](https://github.com/vergilshawn/Awesome-Humanoid-Robot-Learning)**|
+|**2026-05-27**|**SPRINT: Efficient Spectral Priors for Humanoid Athletic Sprints**|Yantong Wei et.al.|[2605.28549](https://arxiv.org/abs/2605.28549)|**[link](https://github.com/Foruck/Awesome-Human-Motion)**|
+|**2026-05-27**|**EIT-Pneumatic Hybrid Robotic Skin for Practical and Accurate Force Map Reconstruction**|Junhwi Cho et.al.|[2605.28468](https://arxiv.org/abs/2605.28468)|**[link](https://github.com/DoongLi/ICRA2026-Paper-List)**|
+|**2026-05-26**|**HumanoidMimicGen: Data Generation for Loco-Manipulation via Whole-Body Planning**|Kevin Lin et.al.|[2605.27724](https://arxiv.org/abs/2605.27724)|**[link](https://github.com/BaiShuanghao/Awesome-Robotics-Manipulation)**|
+|**2026-05-26**|**Uni-LaViRA: Language-Vision-Robot Actions Translation for Unified Embodied Navigation**|Hongyu Ding et.al.|[2605.27582](https://arxiv.org/abs/2605.27582)|**[link](https://github.com/tmgthb/Autonomous-Agents)**|
+|**2026-05-26**|**Towards Shared Embodied Intelligence in Humanoid Robots through Optimization Development and Testing of the Human Aware ergoCub Robot**|Carlotta Sartore et.al.|[2605.26991](https://arxiv.org/abs/2605.26991)|**[link](https://github.com/dhkim-furiosa/daily-ai-robotics-papers)**|
+|**2026-06-02**|**MIND: Multi-Scale Intent Diffusion for Text-Driven Physics-Based Humanoid Control**|Bin Li et.al.|[2605.26006](https://arxiv.org/abs/2605.26006)|**[link](https://github.com/Foruck/Awesome-Human-Motion)**|
+|**2026-05-26**|**ParkourFormer: Integrating Predictive Supervision and Sequence Modeling into Parkour Locomotion**|Yanheng Mai et.al.|[2605.25782](https://arxiv.org/abs/2605.25782)|null|
+|**2026-05-25**|**Safety-Critical Whole-Body Control for Humanoid Robots via Input-to-State Safe Control Barrier Functions**|Kwanwoo Lee et.al.|[2605.25546](https://arxiv.org/abs/2605.25546)|null|
+|**2026-05-23**|**MuGen: Multi-Skill Generative Locomotion Controller for Humanoid Robots**|Yusen Feng et.al.|[2605.24592](https://arxiv.org/abs/2605.24592)|null|
+|**2026-05-22**|**Direct Dynamic Retargeting for Humanoid Imitation Learning from Videos**|Constant Roux et.al.|[2605.23762](https://arxiv.org/abs/2605.23762)|null|
+|**2026-05-22**|**Any2Any: Efficient Cross-Embodiment Transfer for Humanoid Whole-Body Tracking**|Ming Yang et.al.|[2605.23733](https://arxiv.org/abs/2605.23733)|**[link](https://github.com/NickDee96/ASR-TTS-paper-daily)**|
+|**2026-05-22**|**Signal Temporal Logic Motion Planning via Graphs of Convex Sets**|Yu Chen et.al.|[2605.23240](https://arxiv.org/abs/2605.23240)|**[link](https://github.com/vergilshawn/Awesome-Humanoid-Robot-Learning)**|
+|**2026-05-25**|**SCRIPT: Scalable Diffusion Policy with Multi-stage Training for Language-driven Physics-based Humanoid Control**|Jingyan Zhang et.al.|[2605.22894](https://arxiv.org/abs/2605.22894)|**[link](https://github.com/Foruck/Awesome-Human-Motion)**|
+|**2026-05-22**|**Imagine2Real: Towards Zero-shot Humanoid-Object Interaction via Video Generative Priors**|Jiahe Chen et.al.|[2605.22272](https://arxiv.org/abs/2605.22272)|**[link](https://github.com/ZhikangNiu/arxiv_daily)**|
+|**2026-05-21**|**Learning to Evolve: Multi-modal Interactive Fields for Robust Humanoid Navigation in Dynamic Environments**|Peifeng Jiang et.al.|[2605.21935](https://arxiv.org/abs/2605.21935)|**[link](https://github.com/longxiang-ai/awesome-gaussians)**|
+|**2026-05-20**|**To Select or not to Select, that is the Question: Distilling Robot Skill Prediction into a Small Ensemble**|Haechan Mark Bong et.al.|[2605.21242](https://arxiv.org/abs/2605.21242)|**[link](https://github.com/InsomaniacElf/sg-tamil-tts-resources-)**|
+|**2026-05-20**|**Humanoid Whole-Body Manipulation via Active Spatial Brain and Generalizable Action Cerebellum**|Zhizhao Liang et.al.|[2605.21133](https://arxiv.org/abs/2605.21133)|**[link](https://github.com/Foruck/Awesome-Human-Motion)**|
+|**2026-05-19**|**SUGAR: A Scalable Human-Video-Driven Generalizable Humanoid Loco-Manipulation Learning Framework**|Tianshu Wu et.al.|[2605.20373](https://arxiv.org/abs/2605.20373)|**[link](https://github.com/YanjieZe/awesome-humanoid-robot-learning)**|
+|**2026-05-19**|**CEER: Compliant End-Effector and Root Control as a Unified Interface for Hierarchical Humanoid Loco-Manipulation**|Xinyuan Luo et.al.|[2605.19981](https://arxiv.org/abs/2605.19981)|**[link](https://github.com/Foruck/Awesome-Human-Motion)**|
+|**2026-05-19**|**Domain-Adaptive Communication-Rate Optimization for Sim-to-Real Humanoid-Robot Wireless XR Teleoperation**|Caolu Xu et.al.|[2605.19293](https://arxiv.org/abs/2605.19293)|**[link](https://github.com/Foruck/Awesome-Human-Motion)**|
+|**2026-05-18**|**Adversarial Stress Testing of SPARK Humanoid Safety Filters**|Saurav Ghosh et.al.|[2605.19009](https://arxiv.org/abs/2605.19009)|**[link](https://github.com/Foruck/Awesome-Human-Motion)**|
+|**2026-05-18**|**EgoTraj: Real-World Egocentric Human Trajectory Dataset for Multimodal Prediction**|Ahmad Yehia et.al.|[2605.19004](https://arxiv.org/abs/2605.19004)|**[link](https://github.com/Foruck/Awesome-Human-Motion)**|
+|**2026-05-18**|**Unified Walking, Running, and Recovery for Humanoids via State-Dependent Adversarial Motion Priors**|Yidan Lu et.al.|[2605.18611](https://arxiv.org/abs/2605.18611)|**[link](https://github.com/Foruck/Awesome-Human-Motion)**|
+|**2026-05-18**|**Non-Colliding Biometric Identities for Digital Entities: Geometry, Capacity, and Million-Scale Virtual Identity Provisioning**|Yuyang Ji et.al.|[2605.18238](https://arxiv.org/abs/2605.18238)|null|
+
+<p align=right>(<a href=#top>back to top</a>)</p>
 
 <a id="robot-dexterous-manipulation"></a>
 ### Dexterous Manipulation
