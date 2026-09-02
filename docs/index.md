@@ -3,7 +3,7 @@ layout: default
 ---
 
 <a id="top"></a>
-## Updated on 2026.09.01
+## Updated on 2026.09.02
 
 > Usage instructions: [here](./docs/README.md#usage)
 
@@ -1139,50 +1139,55 @@ layout: default
 
 | Publish Date | Title | Authors | PDF | Code |
 |:---------|:-----------------------|:---------|:------|:------|
-|**2026-08-31**|**Zeva: In-Context Causal Learning for Generalizable Embodied Manipulation**|Fu Chen et.al.|[2608.30880](https://arxiv.org/abs/2608.30880)|**[link](https://github.com/dsdfasfaac/zeva-test)**|
-|**2026-08-31**|**Temporal Forcing: 4D Representation Alignment for Vision-Language-Action Models**|Xingyu Ding et.al.|[2608.30643](https://arxiv.org/abs/2608.30643)|**[link](https://github.com/BaiShuanghao/my_arXiv_daily)**|
-|**2026-08-31**|**Behavior-Skill: A Fine-Grained Benchmark for Evaluating Vision-Language-Action Policies in Long-Horizon Tasks**|Chunyun Ma et.al.|[2608.30536](https://arxiv.org/abs/2608.30536)|null|
-|**2026-08-31**|**PAVE: Predictive Alignment and Value-Guided Evolution for World-Action Policies**|Botong Zhao et.al.|[2608.30378](https://arxiv.org/abs/2608.30378)|null|
-|**2026-08-31**|**CometVLA: Co-Training on an Embodied Data Pyramid towards Physical Understanding**|Hanwen Wan et.al.|[2608.30289](https://arxiv.org/abs/2608.30289)|**[link](https://github.com/cold-young/robotics_paper_daily)**|
-|**2026-08-31**|**Motus2: A Self-Evolving General World Model for Dexterous Manipulation**|Hongzhe Bi et.al.|[2608.30237](https://arxiv.org/abs/2608.30237)|**[link](https://github.com/BaiShuanghao/my_arXiv_daily)**|
-|**2026-08-31**|**Rethinking Language's Role in Efficient VLA for Autonomous Vehicles: Toward Smarter, Trustworthy Driving**|Tongfei Guo et.al.|[2608.30144](https://arxiv.org/abs/2608.30144)|**[link](https://github.com/cold-young/robotics_paper_daily)**|
-|**2026-08-30**|**Training-Free Action Correction for VLA Model Failures via Language Feedback**|Owen Kwon et.al.|[2608.29967](https://arxiv.org/abs/2608.29967)|**[link](https://github.com/cold-young/robotics_paper_daily)**|
-|**2026-08-30**|**AcrossWAM1.0:A Modular Latent World-Action Stack for Compact Robot Policies**|Yafei Zhang et.al.|[2608.29937](https://arxiv.org/abs/2608.29937)|**[link](https://github.com/BaiShuanghao/my_arXiv_daily)**|
-|**2026-08-30**|**EMERGE-Policy: A Robot Mind Emerges Beyond a Single Policy**|Zhirui Fang et.al.|[2608.29896](https://arxiv.org/abs/2608.29896)|**[link](https://github.com/EMERGE-Policy/EMERGE-Policy)**|
-|**2026-08-30**|**SymVD: Symmetric Vision Language Action Distillation for Robot Manipulation**|Hyewon Choi et.al.|[2608.29828](https://arxiv.org/abs/2608.29828)|**[link](https://github.com/BaiShuanghao/my_arXiv_daily)**|
-|**2026-08-30**|**DriftingVLA: Native One-Step Vision-Language-Action Generation via Per-Dimension Temporal Drifting**|Yuxuan Gao et.al.|[2608.29749](https://arxiv.org/abs/2608.29749)|**[link](https://github.com/cold-young/robotics_paper_daily)**|
-|**2026-08-30**|**AGM: Achievement-Grounded Memory for Closed-Loop Agents with Frozen VLA Policies**|Hongbo Gao et.al.|[2608.29537](https://arxiv.org/abs/2608.29537)|**[link](https://github.com/cold-young/robotics_paper_daily)**|
-|**2026-08-29**|**SMILE: Smooth Motion for Improved Long-Horizon VLA Execution**|Jongwoo Park et.al.|[2608.29432](https://arxiv.org/abs/2608.29432)|**[link](https://github.com/cold-young/robotics_paper_daily)**|
-|**2026-08-29**|**AnyWorld: Factorized Egocentric World Models for Cross-Embodiment Generalization**|Cheng Chen et.al.|[2608.29242](https://arxiv.org/abs/2608.29242)|**[link](https://github.com/BaiShuanghao/my_arXiv_daily)**|
+|**2026-09-01**|**Evaluating Multimodal LLMs as Generalist Vision-Language-Action Agents for Drone Control: Commanding, Approaching, Tracking and Searching**|Jaewoo Park et.al.|[2609.01404](https://arxiv.org/abs/2609.01404)|null|
+|**2026-09-01**|**EmbodiedSkills: A Unified Framework for Orchestrating, Training, and Deploying VLA Agents**|Wei Wang et.al.|[2609.01281](https://arxiv.org/abs/2609.01281)|null|
+|**2026-09-01**|**REFACTOR-VLA: Unsupervised Library Learning of Typed Motor Programs**|Riyaaz Shaik et.al.|[2609.01215](https://arxiv.org/abs/2609.01215)|null|
+|**2026-09-01**|**Knowing When to Stop: Adaptive Action Chunking via Internal Cross-Attention Dynamics in VLAs**|Runze Xu et.al.|[2609.00908](https://arxiv.org/abs/2609.00908)|null|
+|**2026-08-31**|**ZimaBlue: Evolving Generalizable World Action Models through Scalable Video Pre-training**|Xionghao Wu et.al.|[2609.00188](https://arxiv.org/abs/2609.00188)|**[link](https://github.com/BaiShuanghao/my_arXiv_daily)**|
+|**2026-08-31**|**Zeva: In-Context Causal Learning for Generalizable Embodied Manipulation**|Fu Chen et.al.|[2608.30880](https://arxiv.org/abs/2608.30880)|**[link](https://github.com/RainbowNebula/robot-paper-daily)**|
+|**2026-08-31**|**Temporal Forcing: 4D Representation Alignment for Vision-Language-Action Models**|Xingyu Ding et.al.|[2608.30643](https://arxiv.org/abs/2608.30643)|**[link](https://github.com/luohongk/Embodied-AI-Daily)**|
+|**2026-08-31**|**Behavior-Skill: A Fine-Grained Benchmark for Evaluating Vision-Language-Action Policies in Long-Horizon Tasks**|Chunyun Ma et.al.|[2608.30536](https://arxiv.org/abs/2608.30536)|**[link](https://github.com/luohongk/Embodied-AI-Daily)**|
+|**2026-08-31**|**PAVE: Predictive Alignment and Value-Guided Evolution for World-Action Policies**|Botong Zhao et.al.|[2608.30378](https://arxiv.org/abs/2608.30378)|**[link](https://github.com/luohongk/Embodied-AI-Daily)**|
+|**2026-08-31**|**CometVLA: Co-Training on an Embodied Data Pyramid towards Physical Understanding**|Hanwen Wan et.al.|[2608.30289](https://arxiv.org/abs/2608.30289)|**[link](https://github.com/luohongk/Embodied-AI-Daily)**|
+|**2026-08-31**|**Motus2: A Self-Evolving General World Model for Dexterous Manipulation**|Hongzhe Bi et.al.|[2608.30237](https://arxiv.org/abs/2608.30237)|**[link](https://github.com/knightnemo/Awesome-World-Models)**|
+|**2026-08-31**|**Rethinking Language's Role in Efficient VLA for Autonomous Vehicles: Toward Smarter, Trustworthy Driving**|Tongfei Guo et.al.|[2608.30144](https://arxiv.org/abs/2608.30144)|**[link](https://github.com/luohongk/Embodied-AI-Daily)**|
+|**2026-08-30**|**Training-Free Action Correction for VLA Model Failures via Language Feedback**|Owen Kwon et.al.|[2608.29967](https://arxiv.org/abs/2608.29967)|**[link](https://github.com/luohongk/Embodied-AI-Daily)**|
+|**2026-08-30**|**AcrossWAM1.0:A Modular Latent World-Action Stack for Compact Robot Policies**|Yafei Zhang et.al.|[2608.29937](https://arxiv.org/abs/2608.29937)|**[link](https://github.com/luohongk/Embodied-AI-Daily)**|
+|**2026-08-30**|**EMERGE-Policy: A Robot Mind Emerges Beyond a Single Policy**|Zhirui Fang et.al.|[2608.29896](https://arxiv.org/abs/2608.29896)|null|
+|**2026-08-30**|**SymVD: Symmetric Vision Language Action Distillation for Robot Manipulation**|Hyewon Choi et.al.|[2608.29828](https://arxiv.org/abs/2608.29828)|null|
+|**2026-08-30**|**DriftingVLA: Native One-Step Vision-Language-Action Generation via Per-Dimension Temporal Drifting**|Yuxuan Gao et.al.|[2608.29749](https://arxiv.org/abs/2608.29749)|null|
+|**2026-08-30**|**AGM: Achievement-Grounded Memory for Closed-Loop Agents with Frozen VLA Policies**|Hongbo Gao et.al.|[2608.29537](https://arxiv.org/abs/2608.29537)|null|
+|**2026-08-29**|**SMILE: Smooth Motion for Improved Long-Horizon VLA Execution**|Jongwoo Park et.al.|[2608.29432](https://arxiv.org/abs/2608.29432)|**[link](https://github.com/luohongk/Embodied-AI-Daily)**|
+|**2026-09-01**|**AnyWorld: Factorized Egocentric World Models for Cross-Embodiment Generalization**|Cheng Chen et.al.|[2608.29242](https://arxiv.org/abs/2608.29242)|**[link](https://github.com/BaiShuanghao/my_arXiv_daily)**|
 |**2026-08-29**|**AdaVLA: Adaptive Step Flow Matching for Training-free Acceleration of Vision-Language-Action Models**|Sunghwan Han et.al.|[2608.29208](https://arxiv.org/abs/2608.29208)|**[link](https://github.com/BaiShuanghao/my_arXiv_daily)**|
 |**2026-08-29**|**DREAM: Deployment-Time Demonstration Generation via Real-to-Sim for Scalable Policy Adaptation**|Makoto Sato et.al.|[2608.29078](https://arxiv.org/abs/2608.29078)|**[link](https://github.com/BaiShuanghao/my_arXiv_daily)**|
-|**2026-08-29**|**A Degradation-Tolerance Benchmark for Camera-Only End-to-End Driving**|Haohua Que et.al.|[2608.29005](https://arxiv.org/abs/2608.29005)|**[link](https://github.com/cold-young/robotics_paper_daily)**|
-|**2026-08-29**|**Hydra: A Navigation World Action Model with Discrete Latent Planning and Continuous Flow-Matching Execution**|Mohammad Nazeri et.al.|[2608.28995](https://arxiv.org/abs/2608.28995)|**[link](https://github.com/BaiShuanghao/my_arXiv_daily)**|
+|**2026-08-29**|**A Degradation-Tolerance Benchmark for Camera-Only End-to-End Driving**|Haohua Que et.al.|[2608.29005](https://arxiv.org/abs/2608.29005)|**[link](https://github.com/Ed1sonChen/DailyArxiv)**|
+|**2026-08-29**|**Hydra: A Navigation World Action Model with Discrete Latent Planning and Continuous Flow-Matching Execution**|Mohammad Nazeri et.al.|[2608.28995](https://arxiv.org/abs/2608.28995)|**[link](https://github.com/luohongk/Embodied-AI-Daily)**|
 |**2026-08-28**|**AcrossVAM1.0: Particle World Modeling for Text-Assisted Robot Video Prediction**|Yafei Zhang et.al.|[2608.28491](https://arxiv.org/abs/2608.28491)|**[link](https://github.com/leofan90/Awesome-World-Models)**|
-|**2026-08-28**|**DeicticVLA: Unifying Instruction Modes Based on Language and Deictic Gestures in a Single VLA**|Kango Yanagida et.al.|[2608.28108](https://arxiv.org/abs/2608.28108)|**[link](https://github.com/luohongk/Embodied-AI-Daily)**|
-|**2026-08-27**|**PHR-VLA: Planning Horizon Reasoning for Vision-Language-Action Models**|Davood Soleymanzadeh et.al.|[2608.27609](https://arxiv.org/abs/2608.27609)|null|
-|**2026-08-27**|**Beyond Data Scaling: Representation-Centric Continued Pre-training for Vision-Language-Action Models**|Senqiao Yang et.al.|[2608.27550](https://arxiv.org/abs/2608.27550)|**[link](https://github.com/starVLA/VLAct)**|
-|**2026-08-27**|**FlashVLA: Streaming Action Decoding for Fast and Asynchronous VLA Inference**|Zekai Li et.al.|[2608.27384](https://arxiv.org/abs/2608.27384)|**[link](https://github.com/luohongk/Embodied-AI-Daily)**|
-|**2026-08-27**|**Making Latent Evolution Explicit: Operator-Structured Transitions for World Action Models**|Xiaoxiao Lu et.al.|[2608.27259](https://arxiv.org/abs/2608.27259)|**[link](https://github.com/LMD0311/Awesome-World-Model)**|
-|**2026-08-28**|**GRAFT: Grounded and Efficient Online Reinforcement Adaptation for Fine-Grained Robot Manipulation**|Yibo Qiu et.al.|[2608.27079](https://arxiv.org/abs/2608.27079)|**[link](https://github.com/luohongk/Embodied-AI-Daily)**|
-|**2026-08-27**|**Riemann-1.0: An Embodied World Action Model for Physical AI**|Haofeng Sun et.al.|[2608.27033](https://arxiv.org/abs/2608.27033)|**[link](https://github.com/LMD0311/Awesome-World-Model)**|
-|**2026-08-27**|**TemporalFlow-VLA: Learning Physically Grounded Execution History for Long-Horizon Robot Manipulation**|Jiarui Yang et.al.|[2608.26821](https://arxiv.org/abs/2608.26821)|**[link](https://github.com/luohongk/Embodied-AI-Daily)**|
-|**2026-08-27**|**Decoupling Planning and Control for Instructable Agents**|Zineng Tang et.al.|[2608.26788](https://arxiv.org/abs/2608.26788)|**[link](https://github.com/luohongk/Embodied-AI-Daily)**|
-|**2026-08-30**|**PredVLA: Predictive Sensorimotor Modeling for Sub-Million-Parameter Robot Manipulation**|Hiroki Sawada et.al.|[2608.26673](https://arxiv.org/abs/2608.26673)|null|
-|**2026-08-27**|**FLARE: A Failure-Aware Framework for Autonomous Correction and Recovery in Visual-Language Robotic Manipulation**|Ganlong Zhao et.al.|[2608.26645](https://arxiv.org/abs/2608.26645)|null|
+|**2026-08-28**|**DeicticVLA: Unifying Instruction Modes Based on Language and Deictic Gestures in a Single VLA**|Kango Yanagida et.al.|[2608.28108](https://arxiv.org/abs/2608.28108)|**[link](https://github.com/BaiShuanghao/my_arXiv_daily)**|
+|**2026-08-27**|**PHR-VLA: Planning Horizon Reasoning for Vision-Language-Action Models**|Davood Soleymanzadeh et.al.|[2608.27609](https://arxiv.org/abs/2608.27609)|**[link](https://github.com/BaiShuanghao/my_arXiv_daily)**|
+|**2026-08-27**|**Beyond Data Scaling: Representation-Centric Continued Pre-training for Vision-Language-Action Models**|Senqiao Yang et.al.|[2608.27550](https://arxiv.org/abs/2608.27550)|**[link](https://huggingface.co/models/StarVLA/VLAct_Qwen3GR00T_Robotwin_Finetune)**|
+|**2026-08-27**|**FlashVLA: Streaming Action Decoding for Fast and Asynchronous VLA Inference**|Zekai Li et.al.|[2608.27384](https://arxiv.org/abs/2608.27384)|**[link](https://github.com/BaiShuanghao/my_arXiv_daily)**|
+|**2026-08-27**|**Making Latent Evolution Explicit: Operator-Structured Transitions for World Action Models**|Xiaoxiao Lu et.al.|[2608.27259](https://arxiv.org/abs/2608.27259)|null|
+|**2026-08-28**|**GRAFT: Grounded and Efficient Online Reinforcement Adaptation for Fine-Grained Robot Manipulation**|Yibo Qiu et.al.|[2608.27079](https://arxiv.org/abs/2608.27079)|**[link](https://github.com/BaiShuanghao/my_arXiv_daily)**|
+|**2026-08-27**|**Riemann-1.0: An Embodied World Action Model for Physical AI**|Haofeng Sun et.al.|[2608.27033](https://arxiv.org/abs/2608.27033)|**[link](https://github.com/knightnemo/Awesome-World-Models)**|
+|**2026-08-27**|**TemporalFlow-VLA: Learning Physically Grounded Execution History for Long-Horizon Robot Manipulation**|Jiarui Yang et.al.|[2608.26821](https://arxiv.org/abs/2608.26821)|**[link](https://github.com/BaiShuanghao/my_arXiv_daily)**|
+|**2026-08-27**|**Decoupling Planning and Control for Instructable Agents**|Zineng Tang et.al.|[2608.26788](https://arxiv.org/abs/2608.26788)|**[link](https://github.com/BaiShuanghao/my_arXiv_daily)**|
+|**2026-08-30**|**PredVLA: Predictive Sensorimotor Modeling for Sub-Million-Parameter Robot Manipulation**|Hiroki Sawada et.al.|[2608.26673](https://arxiv.org/abs/2608.26673)|**[link](https://github.com/luohongk/Embodied-AI-Daily)**|
+|**2026-08-27**|**FLARE: A Failure-Aware Framework for Autonomous Correction and Recovery in Visual-Language Robotic Manipulation**|Ganlong Zhao et.al.|[2608.26645](https://arxiv.org/abs/2608.26645)|**[link](https://github.com/BaiShuanghao/my_arXiv_daily)**|
 |**2026-08-27**|**TrapVLA: Trapping Vision-Language-Action Models in Configured Failure Modes**|Jun-Hui Liu et.al.|[2608.26578](https://arxiv.org/abs/2608.26578)|**[link](https://github.com/BaiShuanghao/my_arXiv_daily)**|
-|**2026-08-27**|**Zero-WAM: In-Context World-Action Modeling from Human Videos for Open-Ended Task Generalization**|Jiaming Zhou et.al.|[2608.26103](https://arxiv.org/abs/2608.26103)|**[link](https://github.com/LMD0311/Awesome-World-Model)**|
-|**2026-08-26**|**StreamPI: Streaming Multimodal Temporal Modeling for Vision-Language-Action Models**|Zhe Liu et.al.|[2608.26067](https://arxiv.org/abs/2608.26067)|**[link](https://github.com/luohongk/Embodied-AI-Daily)**|
-|**2026-08-26**|**One Policy, Many Embodiments: Unified Camera-Centric Action Geometry Pre-training for Heterogeneous Embodied Manipulation**| Xiaomi Embodied Intelligence Team et.al.|[2608.26058](https://arxiv.org/abs/2608.26058)|**[link](https://github.com/luohongk/Embodied-AI-Daily)**|
-|**2026-08-26**|**MA-VLA: Multi-Arm Vision-Language-Action Model for Collaboration and Compositional Generalization**|Zaibin Zhang et.al.|[2608.25864](https://arxiv.org/abs/2608.25864)|**[link](https://github.com/luohongk/Embodied-AI-Daily)**|
+|**2026-08-27**|**Zero-WAM: In-Context World-Action Modeling from Human Videos for Open-Ended Task Generalization**|Jiaming Zhou et.al.|[2608.26103](https://arxiv.org/abs/2608.26103)|**[link](https://github.com/knightnemo/Awesome-World-Models)**|
+|**2026-08-26**|**StreamPI: Streaming Multimodal Temporal Modeling for Vision-Language-Action Models**|Zhe Liu et.al.|[2608.26067](https://arxiv.org/abs/2608.26067)|**[link](https://github.com/BaiShuanghao/my_arXiv_daily)**|
+|**2026-08-26**|**One Policy, Many Embodiments: Unified Camera-Centric Action Geometry Pre-training for Heterogeneous Embodied Manipulation**| Xiaomi Embodied Intelligence Team et.al.|[2608.26058](https://arxiv.org/abs/2608.26058)|**[link](https://github.com/Ed1sonChen/DailyArxiv)**|
+|**2026-08-26**|**MA-VLA: Multi-Arm Vision-Language-Action Model for Collaboration and Compositional Generalization**|Zaibin Zhang et.al.|[2608.25864](https://arxiv.org/abs/2608.25864)|null|
 |**2026-08-26**|**TacForcing: Streaming Action Generation with Execution-Time Tactile Feedback**|Jianbo Zhou et.al.|[2608.25798](https://arxiv.org/abs/2608.25798)|**[link](https://huggingface.co/spaces/88runaway/tacforcing)**|
-|**2026-08-27**|**LM-X: Explainable Action Modeling with Progress, Event, and Uncertainty Prediction for Generalist Robot Manipulation**|Jin Lou et.al.|[2608.25757](https://arxiv.org/abs/2608.25757)|**[link](https://github.com/luohongk/Embodied-AI-Daily)**|
-|**2026-08-26**|**GaussianDream++: Efficient 3D Gaussian World Modeling for Robotic Manipulation**|Yuqing Jiang et.al.|[2608.25659](https://arxiv.org/abs/2608.25659)|**[link](https://github.com/LMD0311/Awesome-World-Model)**|
-|**2026-08-26**|**RA-VLA: Retrieval-Augmented VLA for Test-Time Adaptation**|Sanghwan Jang et.al.|[2608.25585](https://arxiv.org/abs/2608.25585)|**[link](https://github.com/Songwxuan/Embodied-AI-Paper-TopConf)**|
+|**2026-08-27**|**LM-X: Explainable Action Modeling with Progress, Event, and Uncertainty Prediction for Generalist Robot Manipulation**|Jin Lou et.al.|[2608.25757](https://arxiv.org/abs/2608.25757)|null|
+|**2026-08-26**|**GaussianDream++: Efficient 3D Gaussian World Modeling for Robotic Manipulation**|Yuqing Jiang et.al.|[2608.25659](https://arxiv.org/abs/2608.25659)|null|
+|**2026-08-26**|**RA-VLA: Retrieval-Augmented VLA for Test-Time Adaptation**|Sanghwan Jang et.al.|[2608.25585](https://arxiv.org/abs/2608.25585)|null|
 |**2026-08-26**|**A Taxonomy of Construction Task Activities for Robot Workers**|Sadman Sakib et.al.|[2608.25395](https://arxiv.org/abs/2608.25395)|**[link](https://github.com/BaiShuanghao/my_arXiv_daily)**|
 |**2026-08-26**|**V-Link: Recovering Lost Visual Representations in Action DiT for Vision-Language-Action Models**|Yehao Lu et.al.|[2608.25308](https://arxiv.org/abs/2608.25308)|**[link](https://github.com/BaiShuanghao/my_arXiv_daily)**|
 |**2026-08-25**|**GaussVLA: Geometry-Aware Spatial Reasoning for Vision-Language-Action Model**|Md Selim Sarowar et.al.|[2608.24959](https://arxiv.org/abs/2608.24959)|**[link](https://github.com/longxiang-ai/awesome-gaussians)**|
-|**2026-08-25**|**Latent Action as Intention Enables Efficient Future Imagination for World Action Models**|Xiang Li et.al.|[2608.24882](https://arxiv.org/abs/2608.24882)|null|
+|**2026-09-01**|**Latent Action as Intention Enables Efficient Future Imagination for World Action Models**|Xiang Li et.al.|[2608.24882](https://arxiv.org/abs/2608.24882)|**[link](https://github.com/LMD0311/Awesome-World-Model)**|
 |**2026-08-25**|**GaussianWAM: Distilling Geometry and Semantics from 3D Gaussian Fields into World-Action Models**|Zijian Zhang et.al.|[2608.24714](https://arxiv.org/abs/2608.24714)|**[link](https://github.com/LMD0311/Awesome-World-Model)**|
 |**2026-08-25**|**Gripper-aware Vision Language Action Models**|Hanyi Zhang et.al.|[2608.24603](https://arxiv.org/abs/2608.24603)|**[link](https://github.com/BaiShuanghao/my_arXiv_daily)**|
 |**2026-08-25**|**PonderPounce: A Pretrained MLLM as an Episode Context Engine for Robot Control**|Suhwan Choi et.al.|[2608.24115](https://arxiv.org/abs/2608.24115)|**[link](https://github.com/Ed1sonChen/DailyArxiv)**|
